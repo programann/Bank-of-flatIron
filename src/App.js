@@ -1,12 +1,16 @@
-// App.js
 import React, { useState } from 'react';
 import './App.css';
 import TransactionForm from './components/TransactionForm';
 import TransactionList from './components/TransactionList';
-import SearchInput from './components/SearchInput';
+import SearchInput from './components/SearchInput'; // Import SearchInput component
 
 function App() {
-    const [transactions, setTransactions] = useState([]);
+    const [transactions, setTransactions] = useState([
+        { date: "2019-08-07", description: "Movies", category: "Entertainment", amount: 100 },
+        { date: "2019-07-07", description: "Chipotle", category: "Food", amount: 200 },
+        { date: "2013-12-07", description: "Sunglasses, UrbanOutfitters", category: "Fashion", amount: 700 },
+        { date: "2000-05-07", description: "Paycheck from Bob's burgers", category: "Income", amount: 200 }
+    ]);
     const [searchTerm, setSearchTerm] = useState('');
 
     const addTransaction = (newTransaction) => {

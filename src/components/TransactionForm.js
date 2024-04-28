@@ -9,6 +9,7 @@ function TransactionForm({ addTransaction }) {
 
     const handleAddTransaction = () => {
         const newTransaction = { date, description, category, amount };
+        console.log("New Transaction:", newTransaction); // Log the new transaction
         addTransaction(newTransaction);
         setDate('');
         setDescription('');

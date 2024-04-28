@@ -1,4 +1,3 @@
-// SearchInput.js
 import React from 'react';
 
 function SearchInput({ setSearchTerm }) {
