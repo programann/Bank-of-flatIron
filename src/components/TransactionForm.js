@@ -1,5 +1,5 @@
 // TransactionForm.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function TransactionForm({ addTransaction }) {
     const [date, setDate] = useState('');
@@ -8,8 +8,9 @@ function TransactionForm({ addTransaction }) {
     const [amount, setAmount] = useState('');
 
     const handleAddTransaction = () => {
+//This will handle a transaction when input is added by the user after it is called back after an event.
+
         const newTransaction = { date, description, category, amount };
-        console.log("New Transaction:", newTransaction); // Log the new transaction
         addTransaction(newTransaction);
         setDate('');
         setDescription('');
@@ -19,7 +20,7 @@ function TransactionForm({ addTransaction }) {
 
     return (
         <div className='addtransaction'>
-            <label htmlFor="date">Date:</label>
+            <label /*This labels the input for the date bar. */ htmlFor="date">Date:</label>
             <input
                 id="date"
                 type='date'
@@ -45,7 +46,7 @@ function TransactionForm({ addTransaction }) {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
             />
-            <button className='addTransaction' onClick={handleAddTransaction}>Add Transaction</button>
+            <button className='addTransaction' onClick=/*Call back the function which handles the change */{handleAddTransaction}>Add Transaction</button>
         </div>
     );
 }

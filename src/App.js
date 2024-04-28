@@ -13,7 +13,7 @@ function App() {
         { date: "2000-05-07", description: "Paycheck from Bob's burgers", category: "Income", amount: 200 }
     ]);
     const [searchTerm, setSearchTerm] = useState('');
-
+//Function which adds all the transactions in the page.
     function addTransaction(newTransaction){
         setTransactions([...transactions, newTransaction]);
     }

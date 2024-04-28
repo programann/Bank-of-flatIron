@@ -10,6 +10,7 @@ function SearchInput({ setSearchTerm }) {
             <input
                 type='text'
                 placeholder='Search Your Transaction Here (enter the description please)'
+                //Pass in th function which handles the search.
                 onChange={handleSearchChange}
             />
         </div>

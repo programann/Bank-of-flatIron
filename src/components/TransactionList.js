@@ -5,19 +5,19 @@ import Transaction from './Transaction';
 function TransactionList({ transactions }) {
     return (
         <table className='table'>
-            <thead>
-                <tr>
+            <th>
+                <tr /*This is the title of the different columns of the tables */>
                     <th>Date</th>
                     <th>Description</th>
                     <th>Category</th>
                     <th>Amount</th>
                 </tr>
-            </thead>
-            <tbody>
+            </th>
+            <tb /*This is where the transactions will fall in to. */>
                 {transactions.map((transaction, index) => (
                     <Transaction key={index} transaction={transaction} />
                 ))}
-            </tbody>
+            </tb>
         </table>
     );
 }
