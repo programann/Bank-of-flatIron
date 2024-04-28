@@ -1,5 +1,5 @@
 .header{
-  background: #B03060;
+  background: purple;
   color:#FFFFFF;
   text-align: center;
 }
@@ -9,7 +9,7 @@
 
 }
 
-.addTransaction input {
+.addtransaction input {
  width: 200px;
  margin: 10px;
  margin-right: 10px;

@@ -1,26 +1,16 @@
-import React from "react";
+// Transaction.js
 
-function Transaction({ transactions }) {
- 
+import React from 'react';
 
-  //.map hepls us to iterate over the values
-  const showTransactions = transactions.map((transactions, index) => (
-    <tr key={index}>
-      <td>{transactions.date}</td>
-      <td>{transactions.description}</td>
-      <td>{transactions.category}</td>
-      <td>{transactions.amount}</td>
-    </tr>
-  ));
-
- 
-
-  //rendering the transactions in the table
-  return (
-    <tbody>
-     {showTransactions}
-    </tbody>
-  )
+function Transaction({ transaction }) {
+    return (
+        <tr>
+            <td>{transaction.date}</td>
+            <td>{transaction.description}</td>
+            <td>{transaction.category}</td>
+            <td>{transaction.amount}</td>
+        </tr>
+    );
 }
 
 export default Transaction;
