@@ -19,6 +19,8 @@ function TransactionForm({ addTransaction }) {
     }
 
     return (
+        <div>
+
         <div className='addtransaction'>
             <label /*This labels the input for the date bar. */ htmlFor="date">Date:</label>
             <input
@@ -46,6 +48,7 @@ function TransactionForm({ addTransaction }) {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
             />
+        </div>
             <button className='addTransaction' onClick=/*Call back the function which handles the change */{handleAddTransaction}>Add Transaction</button>
         </div>
     );
